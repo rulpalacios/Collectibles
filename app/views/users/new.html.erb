@@ -1,43 +1,29 @@
-<%= form_for @user do |f| %>
+<%= form_for @user, builder: BulmaFormBuilder do |f| %>
 
-  <%- if @user.errors.any? %>
-    <div class="notification is-danger">
-      <%= t 'user.errors' %>
-    </div>
-  <% end %>
+  <%= f.form_error%>
 
   <div class="field">
     <%= f.label :name, class: 'label' %>
     <div class="control">
       <%= f.text_field :name, class: 'input' %>
     </div>
-    <%- if @user.errors[:name].any? %>
-      <div class="help is-danger">
-        <%= @user.errors[:name].first %>
-      </div>
-    <% end %>
+    <%= f.field_error :name %>
   </div>
+
   <div class="field">
     <%= f.label :email, class: 'label' %>
     <div class="control">
       <%= f.text_field :email, class: 'input' %>
     </div>
-    <%- if @user.errors[:email].any? %>
-      <div class="help is-danger">
-        <%= @user.errors[:email].first %>
-      </div>
-    <% end %>
+    <%= f.field_error :email %>
   </div>
+
   <div class="field">
     <%= f.label :password, class: 'label' %>
     <div class="control">
       <%= f.password_field :password, class: 'input' %>
     </div>
-    <%- if @user.errors[:password].any? %>
-      <div class="help is-danger">
-        <%= @user.errors[:password].first %>
-      </div>
-    <% end %>
+    <%= f.field_error :password %>
   </div>
 
   <%= f.submit class: 'button is-primary'%>
