@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+  <h1 class="title">Welcome, <%= current_user.name %></h1>
+  <%= link_to('Salir', logout_path, class: 'button is-primary') %>
+<% end %>
+
+<p>Coleccionables...</p>
+
+

@@ -1,0 +1,18 @@
+<h1 class="title">Login</h1>
+
+<%= form_tag login_path do |form| %>
+  <div class="field">
+    <%= label_tag :email, nil, class: 'label' %>
+    <div class="control">
+      <%= text_field_tag :email, nil, class: 'input' %>
+    </div>
+  </div>
+  <div class="field">
+    <%= label_tag :password, nil, class: 'label' %>
+    <div class="control">
+      <%= password_field_tag :password, nil, class: 'input' %>
+    </div>
+  </div>
+  
+  <%= submit_tag nil, class: 'button is-primary' %>
+<% end %>
