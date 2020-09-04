@@ -1,0 +1,30 @@
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+<div id="navbarBasicExample" class="navbar-menu">
+  <div class="navbar-start">
+    <%= link_to('Home', root_path, class: 'navbar-item') %>
+    <a class="navbar-item">
+      Figuras
+    </a>
+  </div>
+
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <% if user_signed_in? %>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              <%= current_user.name %>
+            </a>
+            <div class="navbar-dropdown">
+              <%= link_to('Salir', logout_path, class: 'navbar-item') %>
+            </div>
+          </div>
+        <% else %>
+          <%= link_to('Sign up', signup_path, class: 'button is-primary') %>
+          <%= link_to('Log in', login_path, class: 'button is-light') %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</nav>

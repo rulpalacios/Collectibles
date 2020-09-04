@@ -11,12 +11,10 @@
   </head>
 
   <body>
+    <%= render "navigation/navbar"%>
+  
     <div class="container">
-      <% flash.each do |key, value| %>
-        <div class="notification <%= flash_class(key) %>">
-          <%= value%>
-        </div>
-      <% end %>
+      <%= render "common/flash_messages"%>
 
       <%= yield %>
     </div>
