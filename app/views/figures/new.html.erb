@@ -1,0 +1,40 @@
+<h1 class="title" >New Figure</h1>
+
+<%= form_for @figure, builder: BulmaFormBuilder do |f|%>
+  <%= f.form_error %>
+
+  <div class="field">
+    <%= f.label :name, class: 'label' %>
+    <div class="control">
+      <%= f.text_field :name, class: 'input' %>
+    </div>
+    <%= f.field_error :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year, class: 'label' %>
+    <div class="control">
+      <%= f.text_field :year, class: 'input' %>
+    </div>
+    <%= f.field_error :year %>
+  </div>
+
+  <div class="field">
+    <%= f.label :brand, class: 'label' %>
+    <div class="control">
+      <%= f.text_field :brand, class: 'input' %>
+    </div>
+    <%= f.field_error :brand %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo, class: 'label' %>
+    <div class="control">
+      <%= f.text_field :photo, class: 'input' %>
+    </div>
+    <%= f.field_error :photo %>
+  </div>
+
+  <%= f.submit class: 'button is-primary'%>
+<% end %>
+
