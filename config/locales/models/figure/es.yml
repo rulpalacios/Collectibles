@@ -1,0 +1,24 @@
+es:
+  activerecord:
+    models:
+      figure:
+        one: 'Figura'
+        other: 'Figuras'
+    attributes:
+      figure:
+        name: 'Nombre'
+        year: 'Año'
+        brand: 'Marca'
+        photo: 'Foto'
+    errors:
+      models:
+        figure:
+          attributes:
+            name:
+              blank: 'es un campo requerido'
+            year:
+              blank: 'es un campo requerido'
+            brand:
+              blank: 'es un campo requerido'
+            photo:
+              blank: 'es un campo requerido'

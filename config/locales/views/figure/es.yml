@@ -1,0 +1,9 @@
+es:
+  helpers:
+    submit:
+      figure:
+        create: "Guardar %{model}"
+  figures:
+    new:
+      form:
+        error: 'Oops!! parece que algo salio mal al intentar guardar %{model}'
