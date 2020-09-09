@@ -2,6 +2,10 @@ class FiguresController < ApplicationController
   def index
   end
 
+  def show
+    @figure = Figure.find params[:id]
+  end
+
   def new
     @figure = Figure.new
   end

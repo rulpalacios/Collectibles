@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   get 'logout', to: 'sessions#destroy'
 
-  resource :users, only: [:new, :create]
-  resource :figures
+  resources :users, only: [:new, :create]
+  resources :figures
 end

@@ -18,7 +18,6 @@
     </div>
     <%= f.field_error :year %>
   </div>
-
   <div class="field">
     <%= f.label :brand, class: 'label' %>
     <div class="control">
@@ -26,11 +25,10 @@
     </div>
     <%= f.field_error :brand %>
   </div>
-
-  <div class="field">
+   <div class="field">
     <%= f.label :photo, class: 'label' %>
     <div class="control">
-      <%= f.text_field :photo, class: 'input' %>
+      <%= f.file_field :photo, class: 'input' %>
     </div>
     <%= f.field_error :photo %>
   </div>
