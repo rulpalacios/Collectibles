@@ -1,6 +1,6 @@
 class FiguresController < ApplicationController
   def index
-    @figures = Figure.all
+    @pagy, @figures = pagy(Figure.all)
   end
 
   def show
