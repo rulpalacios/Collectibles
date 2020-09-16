@@ -1,4 +1,6 @@
 class FiguresController < ApplicationController
+  before_action :authenticate_user!, only: %i[new create]
+  
   def index
     @pagy, @figures = pagy(Figure.all)
   end
