@@ -23,9 +23,17 @@ class FiguresController < ApplicationController
   end
 
   def edit
+    @figure = Figure.find params[:id]
   end
 
   def update
+    @figure = Figure.find params[:id]
+
+    if @figure.update figure_params
+      return redirect_to @figure, notice: 'Figure updated!'
+    end
+
+    render :edit
   end
 
   private
