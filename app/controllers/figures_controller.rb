@@ -1,13 +1,12 @@
 class FiguresController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
-  
+  before_action :set_figure, only: %i[show edit update]
+
   def index
     @pagy, @figures = pagy(Figure.all)
   end
 
-  def show
-    @figure = Figure.find params[:id]
-  end
+  def show; end
 
   def new
     @figure = Figure.new
@@ -22,13 +21,9 @@ class FiguresController < ApplicationController
     render :new
   end
 
-  def edit
-    @figure = Figure.find params[:id]
-  end
+  def edit; end
 
   def update
-    @figure = Figure.find params[:id]
-
     if @figure.update figure_params
       return redirect_to @figure, notice: 'Figure updated!'
     end
@@ -41,4 +36,9 @@ class FiguresController < ApplicationController
   def figure_params
     params.require(:figure).permit(:name, :year, :brand, :photo)
   end
+
+  def set_figure
+    @figure = Figure.find params[:id]
+  end
+
 end
