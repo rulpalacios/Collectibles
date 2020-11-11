@@ -1,0 +1,7 @@
+es:
+  sessions:
+    create:
+      notice: 'Autenticado correctamente.'
+      alert: 'Correo ó contraseña invalidos.'
+    destroy:
+      notice: 'Sesión finalizada'

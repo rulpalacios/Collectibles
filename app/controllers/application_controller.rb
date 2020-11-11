@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user!
-    redirect_to root_path, alert: 'Debees de iniciar sesion' unless user_signed_in?
+    redirect_to root_path, alert: t('common.auth.authenticate_user') unless user_signed_in?
   end
 end

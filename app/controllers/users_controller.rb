@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      return redirect_to root_url, notice: 'Logged In!'
+      return redirect_to root_url, notice: t('.notice')
     end
 
     render :new

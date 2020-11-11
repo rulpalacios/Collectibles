@@ -1,0 +1,4 @@
+es:
+  common:
+    auth:
+      authenticate_user: 'Debes iniciar una sesión.'

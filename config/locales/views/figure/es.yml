@@ -4,6 +4,10 @@ es:
       figure:
         create: "Guardar %{model}"
   figures:
+    create:
+      notice: 'Figura guardada correctamente.'
+    update:
+      notice: 'Figura actualizada correctamente.'
     new:
       form:
         error: 'Oops!! parece que algo salio mal al intentar guardar %{model}'

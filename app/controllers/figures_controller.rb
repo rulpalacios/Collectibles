@@ -15,7 +15,7 @@ class FiguresController < ApplicationController
   def create
     @figure = current_user.figures.new figure_params
     if @figure.save
-      return redirect_to root_url, notice: 'Figure created!'
+      return redirect_to root_url, notice: t('.notice')
     end
 
     render :new
@@ -25,7 +25,7 @@ class FiguresController < ApplicationController
 
   def update
     if @figure.update figure_params
-      return redirect_to @figure, notice: 'Figure updated!'
+      return redirect_to @figure, notice: t('.notice')
     end
 
     render :edit
